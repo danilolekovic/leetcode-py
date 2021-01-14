@@ -1,0 +1,34 @@
+<html>
+                    <head>
+                        <title>your-first-name-here's Leetcode Solutions</title>
+                        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+                    </head>
+                    <body style="padding:3em;">
+                    <h2><a href="../index.html">Go Back</a></h2>
+                    <br>
+                    <br>
+                    <pre><code class="python">class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        indices = []
+        
+        for index, num in enumerate(nums):
+            for index2, num2 in enumerate(nums):
+                if index != index2 and num + num2 == target:
+                    indices.append(index)
+                    indices.append(index2)
+                    return indices
+        
+        return indices
+        </pre></code>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                        <link rel="stylesheet"
+                            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/default.min.css">
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
+                        <script>hljs.initHighlightingOnLoad();</script>
+                    </body>
+                </html>
