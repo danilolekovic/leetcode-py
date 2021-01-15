@@ -1,0 +1,36 @@
+<html>
+                    <head>
+                        <title>Danilo's Leetcode Python Solutions</title>
+                        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+                    </head>
+                    <body style="padding:3em;">
+                    <h2><a href="../index.html">Go Back</a></h2>
+                    <br>
+                    <br>
+                    <pre><code class="python">class Solution(object):
+    def romanToInt(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        numerals = {'M':1000, 'D':500, 'C':100, 'L':50, 'X':10, 'V':5, 'I':1}
+        
+        result = 0
+        p = 'I'
+        
+        for char in s[::-1]:
+            if numerals[char] < numerals[p]:
+                result = result - numerals[char]
+            else:
+                result = result + numerals[char]
+                p = char
+                
+        return result
+</pre></code>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                        <link rel="stylesheet"
+                            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/default.min.css">
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
+                        <script>hljs.initHighlightingOnLoad();</script>
+                    </body>
+                </html>
